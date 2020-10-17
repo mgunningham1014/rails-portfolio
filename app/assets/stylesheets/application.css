@@ -17,16 +17,43 @@
  * {
  	margin: 0;
  	padding: 0;
+ 	box-sizing: border-box;
+ }
+
+ body {
+ 	background: #7B3D46;
  }
 
  #wrapper {
- 	width: 60%;
- 	margin: 50px auto;
+ 	width: 75%;
+ 	margin: 0 auto;
+ 	background: #fff;
+ 	padding: 75px;
+ }
+
+ #container {
+ 	min-height: 100vh;
+ 	font-family: 'Montserrat', sans-serif;
+ 	color: #403c3a;
+ 	font-weight: 300;
+ 	margin-left: 235px;
+ 	margin-top: 40px;
+ }
+ #container h1 {
+	font-weight: 600;
+ }
+ #container h2 {
+	font-weight: 600;
+ }
+ #container h3 {
+	font-weight: 600;
  }
 
  .clear {
  	clear: both;
  }
+
+
 
 /***** HEADER *****/
 .header {
@@ -38,14 +65,14 @@
 	margin: 10px;
 	width: 200px;
 	border-radius: 50%;
-	border: 2px solid black;
 	float: left;
 }
 .header h1 {
-	margin-left: 50px;
+	margin-left: 40px;
 	display: inline-block;
-	font-family: 'Lily Script One', sans-serif;
-	font-size: 4em;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3.5em;
+	color: #d54e62;
 }
 
 /***** NAVBAR *****/
@@ -55,19 +82,20 @@
 }
 .navbar {
 	list-style-type: none;
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid #d54e62;
 	line-height: 25px;
 	width: 90%;
 	margin-left: 70px;
 }
 .navbar li {
 	display: inline;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Megrim', sans-serif;
 	margin-left: 15px;
 	font-size: 1.2em;
 }
 .navbar a {
 	text-decoration: none;
+	color: #286385;
 }
 
 /***** LEFT MENU *****/
@@ -76,23 +104,39 @@
 	margin-top: 40px;
 	float: left;
 	text-align: center;
-	line-height: 75px;
+	line-height: 60px;
 }
 .left-menu ul {
 	list-style-type: none;
 }
-
-.left-menu a {
-	text-decoration: none;
-	border-radius: 50%;
-	border: 2px solid black;
-	padding: 10px;
+.sm-logo {
+	width: 30px;
+}
+.linkedin {
+	width: 36px;
+	margin-left: 6px;
+}
+.ig {
+	width: 32px;
 }
 
+/***** FOOTER *****/
+.footer {
+	border-top: 1px solid #88807c;
+	font-family: 'Montserrat', sans-serif;
+	height: 20vh;
+}
+.copy {
+	text-align: right;
+	margin: 25px;
+	font-size: .75em;
+}
 
-
-
-
+/***** INTRO *****/
+.intro {
+	font-size: 2em;
+	margin-top: 50px;
+}
 
 
 

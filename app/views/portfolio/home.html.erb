@@ -1,2 +1,10 @@
-<h1>Portfolio#home</h1>
-<p>Find me in app/views/portfolio/home.html.erb</p>
+<p class="intro">Hi! My name is Mandi -- I'm a data-driven, backend software developer!</p></br>
+
+
+<div class="articles">
+<% @articles.each do |art| %>
+	<%= art.title %></br>
+	<%= art.pub_date %> </br>
+	<%= art.body %></br></br>
+<% end %>
+</div>

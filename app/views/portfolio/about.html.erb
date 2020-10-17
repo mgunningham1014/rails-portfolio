@@ -1,2 +1,18 @@
-<h1>Portfolio#about</h1>
-<p>Find me in app/views/portfolio/about.html.erb</p>
+<h1>Bio</h1>
+<br>
+<h3>Currently Reading: </h3> 
+
+<% @reading.each do |book| %>
+</br>
+	<%= image_tag book.image_url %></br>
+	<%= book.title %></br>
+	<%= book.author %></br>
+ -----------
+</br>
+<% end %>
+<br>
+<h3>Currently Listening To: </h3> <p>M.I.A on Pandora</p>
+<br>
+<h3>Current Employment: </h3> <p>T-Mobile</p>
+<br><br>
+<p>Hi!  My name is Mandi and I'm a backend developer specializing in microservice architcture and RESTful API design.  </p>
