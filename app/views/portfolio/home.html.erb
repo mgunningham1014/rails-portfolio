@@ -1,10 +1,25 @@
 <p class="intro">Hi! My name is Mandi -- I'm a data-driven, backend software developer!</p></br>
 
-
+<h2>Check out what I've been up to:</h2>
 <div class="articles">
-<% @articles.each do |art| %>
-	<%= art.title %></br>
-	<%= art.pub_date %> </br>
-	<%= art.body %></br></br>
-<% end %>
+
+	<% @articles.each do |art| %>
+		<div class="art-card">
+			<div class="art-img-split">
+				<a href="<%=art.link%>" class="art-link">
+					<%= image_tag art.image_url, class: "art-img" %>
+				</a>
+			</div>
+			<div class="art-body-split">
+				<a href="<%=art.link%>" class="art-link">
+					<p class="art-title"><%= art.title %></p>
+				</a>
+				<p class="art-date"><%= art.pub_date %></p>
+				<p class="art-body"><%= art.body %></p>
+				<a href="<%=art.link%>" class="art-link">
+					<p class="read-more">Read more...</p>
+				</a>
+			</div>
+		</div>
+	<% end %>
 </div>

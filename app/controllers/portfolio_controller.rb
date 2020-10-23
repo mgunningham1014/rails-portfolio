@@ -13,7 +13,10 @@ class PortfolioController < ApplicationController
     data['rss']['channel']['item'].first(4).each do |art|
       if art['category']
         desc = Nokogiri::HTML(art['description']).css('.medium-feed-snippet').text
-        @articles.push(Article.new(art['title'], art['pubDate'], desc))
+        image = Nokogiri::HTML(art['description']).css('img').attribute('src').value
+        datetime = DateTime.parse(art['pubDate'])
+        date = datetime.strftime('%a, %b %d, %Y')
+        @articles.push(Article.new(art['title'], date, desc, image, art['link']))
       end
     end
   end
