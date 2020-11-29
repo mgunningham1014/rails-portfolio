@@ -10,7 +10,7 @@ class PortfolioController < ApplicationController
     http = Net::HTTP.get(URI.parse("https://medium.com/feed/@mandigunningham"))
     data = JSON.parse(Hash.from_xml(http).to_json)
     @articles = []
-    data['rss']['channel']['item'].first(4).each do |art|
+    data['rss']['channel']['item'].first(5).each do |art|
       if art['category']
         desc = Nokogiri::HTML(art['description']).css('.medium-feed-snippet').text
         image = Nokogiri::HTML(art['description']).css('img').attribute('src').value
@@ -32,6 +32,14 @@ class PortfolioController < ApplicationController
   end
 
   def resume
+  end
+
+  def download_resume
+    send_file(
+      "#{Rails.root}/app/assets/public/MG_Resume2020.pdf",
+      filename: "mandi_gunningham_resume2020.pdf",
+      type: "application/pdf"
+    )
   end
 
   def projects

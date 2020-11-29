@@ -6,23 +6,27 @@
     <%= csp_meta_tag %>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Roboto&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <script src="https://kit.fontawesome.com/3430f83947.js" crossorigin="anonymous"></script>
 
   <body>
     <div id="wrapper">
       <%= render partial: 'layouts/header' %>
       <%= render partial: 'layouts/leftmenu' %>
       <div id="container">
-        <%= yield %>
+        <div class="content">
+          <%= render partial: 'layouts/separator' %>
+          <%= yield %>
+        </div>
       </div>
       <%= render partial: 'layouts/footer' %>
     </div>
