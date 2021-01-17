@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,700&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
@@ -19,14 +19,11 @@
   <script src="https://kit.fontawesome.com/3430f83947.js" crossorigin="anonymous"></script>
 
   <body>
+    <%= render partial: 'layouts/leftmenu' %>
     <div id="wrapper">
       <%= render partial: 'layouts/header' %>
-      <%= render partial: 'layouts/leftmenu' %>
       <div id="container">
-        <div class="content">
-          <%= render partial: 'layouts/separator' %>
           <%= yield %>
-        </div>
       </div>
       <%= render partial: 'layouts/footer' %>
     </div>

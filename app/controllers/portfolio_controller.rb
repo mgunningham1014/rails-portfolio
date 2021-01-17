@@ -9,15 +9,21 @@ class PortfolioController < ApplicationController
 
     http = Net::HTTP.get(URI.parse("https://medium.com/feed/@mandigunningham"))
     data = JSON.parse(Hash.from_xml(http).to_json)
+    items = data['rss']['channel']['item']
     @articles = []
-    data['rss']['channel']['item'].first(5).each do |art|
+    count = 0
+    i = 0
+    while count < 3 do
+      art = items[i]
       if art['category']
         desc = Nokogiri::HTML(art['description']).css('.medium-feed-snippet').text
         image = Nokogiri::HTML(art['description']).css('img').attribute('src').value
         datetime = DateTime.parse(art['pubDate'])
         date = datetime.strftime('%a, %b %d, %Y')
         @articles.push(Article.new(art['title'], date, desc, image, art['link']))
+        count = count + 1
       end
+      i = i + 1
     end
   end
 

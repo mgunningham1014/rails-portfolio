@@ -1,18 +1,22 @@
-<h1>Bio</h1>
-<br>
-<h3>Currently Reading: </h3> 
-
-<% @reading.each do |book| %>
-</br>
-	<%= image_tag book.image_url %></br>
-	<%= book.title %></br>
-	<%= book.author %></br>
- -----------
-</br>
+<h2>Currently Reading: </h2> 
+<div class="reading">
+	<% @reading.each do |book| %>
+	<div class="book-card">
+		<%= image_tag book.image_url, class: "book-img"%></br>
+		<p class="book-title"><%= book.title %></p>
+		<div class="book-author"><%= book.author %></div>
+	</div>
 <% end %>
-<br>
+</div>
+
+<div class="clear"></div>
+<!--<br>
 <h3>Currently Listening To: </h3> <p>M.I.A on Pandora</p>
-<br>
-<h3>Current Employment: </h3> <p>T-Mobile</p>
-<br><br>
-<p>Hi!  My name is Mandi and I'm a backend developer specializing in microservice architcture and RESTful API design.  </p>
+<br> -->
+<h2>Current Employment: </h2> <p>T-Mobile</p>
+</br>
+<h2>Bio:</h2>
+<p>I'm a back-end developer focusing on microservice architecture design and development. I'm a data-driven developer and have experience working in SQL and NoSQL database environments.</p>
+</br>
+<p>In my free time I work on full-stack projects in Ruby on Rails or mobile Android development. I also write on Medium about technology, women's issues, and career development. I'm proud to say that I often publish in Better Programming, The Innovation, and Women 2.0.</p>
+</br>
